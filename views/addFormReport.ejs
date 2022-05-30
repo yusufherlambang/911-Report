@@ -1,0 +1,57 @@
+<%- include('./partials/header', {title: 'Add New Report' }) %>
+<%- include('./partials/navbar') %>
+
+<div class="container">
+    <div>
+        <h1><br>
+            <center>Form Report</center>
+        </h1>
+    </div>
+    <br>
+    <div>
+        <form action="/reports/add" method="POST">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="firstName">First Name :</label>
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="firstName">
+                </div>
+                <div class="col-md-3">
+                    <label for="lastName">Last Name :</label>
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lastName">
+                </div>
+            </div>
+            <div class="col-md-1"><br>
+                <label for="age" class="form-label">Age :</label><br>
+                <input type="number" class="form-control" placeholder="age" name="age">
+            </div><br>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email :</label>
+                <input type="text" class="form-control" placeholder="name@example.com" aria-label="email" name="email">
+            </div><br>
+            <div class="col-md-6">
+                <label for="nik" class="form-label">NIK :</label>
+                <input type="text" class="form-control" placeholder="nik" aria-label="nik" name="nik">
+            </div><br>
+            <div class="col-md-6">
+                <label for="event" class="form-label">Event :</label>
+                <input type="text" class="form-control" placeholder="event" aria-label="event" name="event">
+            </div><br>
+            <div class="col-md-6">
+                <label for="description" class="form-label">Description :</label>
+                <textarea name="description" class="form-control" placeholder="Leave a description here" rows="3" ></textarea>
+            </div><br>
+            <div class="col-md-6">
+                <label for="photo" class="form-label">Photo :</label>
+                <input type="text" class="form-control" placeholder="url photo" aria-label="photo" name="photo">
+            </div><br>
+            <div class="col-md-2">
+                <label for="dateOfEvent" class="form-label">Date Of Event :</label>
+                <input type="date" class="form-control" placeholder="dateOfEvent" aria-label="dateOfEvent" name="dateOfEvent">
+            </div><br>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('./partials/footer') %>

@@ -1,0 +1,64 @@
+<%- include('./partials/header', {title: `Report Detail` }) %>
+<%- include('./partials/navbar') %>
+
+        <div class="container">
+            <div>
+                <h1><br>
+                    <center>Report Detail #<%= result.id %> </center>
+                </h1>
+            </div>
+            <br>
+            <div>
+                <form action="/reports/<%= result.id %>/edit" method="POST">
+                    <picture>
+                        <img src="<%= result.photo %>" class="img-fluid img-thumbnail" alt="photo">
+                    </picture><br><br>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="firstName">First Name :</label>
+                            <input type="text" class="form-control" value="<%= result.firstName %>" aria-label="First name" name="firstName">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="lastName">Last Name :</label>
+                            <input type="text" class="form-control" value="<%= result.lastName %>" aria-label="Last name"
+                                name="lastName">
+                        </div>
+                    </div>
+                    <div class="col-md-1"><br>
+                        <label for="age" class="form-label">Age :</label><br>
+                        <input type="number" class="form-control" value="<%= result.age %>" name="age">
+                    </div><br>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="text" class="form-control" value="<%= result.email %>" aria-label="email"
+                            name="email">
+                    </div><br>
+                    <div class="col-md-6">
+                        <label for="nik" class="form-label">NIK :</label>
+                        <input type="text" class="form-control" value="<%= result.nik %>" aria-label="nik" name="nik">
+                    </div><br>
+                    <div class="col-md-6">
+                        <label for="event" class="form-label">Event :</label>
+                        <input type="text" class="form-control" value="<%= result.event %>" aria-label="event" name="event">
+                    </div><br>
+                    <div class="col-md-6">
+                        <label for="description" class="form-label">Description :</label> 
+                        <textarea class="form-control" rows="3" name="description"><%= result.description %></textarea>
+                    </div><br>
+                    <div class="col-md-6">
+                        <label for="photo" class="form-label">Photo :</label>
+                        <input type="text" class="form-control" value="<%= result.photo %>" aria-label="photo" name="photo">
+                    </div><br>
+                    <div class="col-md-2">
+                        <label for="dateOfEvent" class="form-label">Date Of Event :</label>
+                        <input type="date" class="form-control" value="<%= result.formatEditFormDOE %>" aria-label="dateOfEvent"
+                            name="dateOfEvent">
+                    </div><br>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-dark">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <%- include('./partials/footer') %>
+        

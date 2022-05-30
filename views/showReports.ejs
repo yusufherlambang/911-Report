@@ -1,0 +1,50 @@
+<%- include('./partials/header', {title: 'List Report' }) %>
+<%- include('./partials/navbar') %>
+<div class="container">
+    <div>
+        <center>
+            <h1>List Report</h1>
+        </center>
+    </div><br>
+    <div class="container-fluid">
+        <form class="d-flex" action="/reports?" method="get">
+            <input class="form-control me-2" name="event" type="search" placeholder="By Event" aria-label="Search">
+            <input class="form-control me-2" name="age" type="search" placeholder="By Age" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+    <div class="alert alert-warning">
+        <p>
+            The oldest person is <%= objMaxAge  %> years old, the youngest is <%= objMinAge %> years old, and average all age is <%= objAvgAge %> years old
+            <button type="button" class="btn-close" aria-label="Close"></button>
+        </p>
+    </div>
+    <div>
+        <table class="table table-striped table-bordered table-hover">  
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result.result1.forEach(el=>{ %>
+                <tr>
+                    <td><%= el.formatDateOfEvent %></td>
+                    <td><%= el.event %></td>
+                    <td>
+                        <a href="/reports/<%= el.id %> ">
+                            <button type="button" class="btn btn-success">See Detail</button>
+                        </a>
+                        <a href="/reports/<%= el.id %>/delete">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<%- include('./partials/footer') %>

@@ -1,0 +1,30 @@
+{
+  "name": "911-report",
+  "version": "1.0.0",
+  "description": "Challenge ini di nilai dan hanya 1 bagian 💯.  \r Deadline ada 3 :  \r - Deadline checkpoint #1 W3D5 09.00 WIB\r - Deadline checkpoint #2 W3D6 09.00 WIB\r - Final deadline W4D1 09.00 WIB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmt-22-verona-fox/911-report.git"
+  },
+  "keywords": [],
+  "author": "Muhammad Yusuf Herlambang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmt-22-verona-fox/911-report/issues"
+  },
+  "homepage": "https://github.com/rmt-22-verona-fox/911-report#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16",
+    "sequelize-cli": "^6.4.1"
+  }
+}
